@@ -59,18 +59,32 @@ Usage Instructions:
 6.	Model Training: Train the classification model using the prepared dataset.
 7.	Model Evaluation: Evaluate the model using test data and check its accuracy and reliability.
 8.	Generate Recommendations: Use the trained model to predict space availability and recommend suitable areas for new health facilities.
+   
 Dependencies:
+
 •	Python 3.7+
+
 •	pandas
+
 •	numpy
+
 •	scikit-learn
+
 •	matplotlib
+
 •	seaborn
+
 Contact Information:
+
 For further information or queries regarding this project, please contact:
+
 •	Data Scientist: Levi Bushuru
+
 •	Email: bushurumark@gmail.com
+
 •	Phone: +254704084567 or +254704135291
+
 Acknowledgements:
+
 We would like to thank the health stakeholders in Murang'a County for providing the data and support needed for this project. Special thanks to the Kemri Hackathon organizers for facilitating this initiative.
 
