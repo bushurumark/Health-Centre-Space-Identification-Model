@@ -19,7 +19,7 @@ import joblib
 
 
 # Load the trained model
-model = joblib.load(r"C:\Users\user\Desktop\KEMRI\model.pkl")
+model = joblib.load("model.pkl")
 
 
 # In[4]:
