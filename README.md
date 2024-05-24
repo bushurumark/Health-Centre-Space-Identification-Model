@@ -1,4 +1,3 @@
-# Health-Centre-Space-Identification-Model
 README File for Kemri Hackathon Project
 Project Title:
 Data-Driven Solution for Space Availability in Health Facilities of Murang'a County
