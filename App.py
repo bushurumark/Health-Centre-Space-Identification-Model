@@ -18,12 +18,12 @@ import joblib
 # In[3]:
 
 
+# Log and display the scikit-learn version
+sklearn_version = sklearn.__version__
+st.write(f"scikit-learn version: {sklearn_version}")
+
 # Load the trained model
 model = joblib.load("model.pkl")
-
-
-# In[4]:
-
 
 # Define function to preprocess input data
 def preprocess_input(SUBCOUNTY, YEAR_2011, YEAR_2012, YEAR_2013, AGENCY,
@@ -33,7 +33,7 @@ def preprocess_input(SUBCOUNTY, YEAR_2011, YEAR_2012, YEAR_2013, AGENCY,
     input_data = pd.DataFrame({
         'SUBCOUNTY': [SUBCOUNTY],
         'YEAR2011': [YEAR_2011],
-        'YEAR2012': [YEAR_2012],  
+        'YEAR2012': [YEAR_2012],
         'YEAR2013': [YEAR_2013],
         'AGENCY': [AGENCY],
         'LEVEL': [LEVEL],
@@ -43,7 +43,8 @@ def preprocess_input(SUBCOUNTY, YEAR_2011, YEAR_2012, YEAR_2013, AGENCY,
         'Capacity_coded': [Capacity_coded]
     })
     
-    # Encoding of all categorical variables 
+    # Perform any necessary data preprocessing (e.g., encoding categorical variables)
+    # Assuming all categorical variables need to be encoded
     input_data_encoded = pd.get_dummies(input_data)
     
     # Ensure the input data matches the model's expected features
