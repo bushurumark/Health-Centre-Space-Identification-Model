@@ -17,11 +17,6 @@ import joblib
 
 # In[3]:
 
-
-# Log and display the scikit-learn version
-sklearn_version = sklearn.__version__
-st.write(f"scikit-learn version: {sklearn_version}")
-
 # Load the trained model
 model = joblib.load("model.pkl")
 
