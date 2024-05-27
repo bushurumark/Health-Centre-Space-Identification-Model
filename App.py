@@ -56,9 +56,33 @@ def preprocess_input(SUBCOUNTY, YEAR_2011, YEAR_2012, YEAR_2013, AGENCY,
 
     return input_data_encoded
 
+# Custom CSS for styling
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f5f5f5;
+    }
+    .title {
+        color: #4CAF50;
+        text-align: center;
+        font-size: 40px;
+    }
+    .widget-label {
+        color: #ff6347;
+        font-weight: bold;
+    }
+    .prediction-result {
+        color: #008080;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Create the web interface
 def main():
-    st.title('Space Prediction Model')
+    st.markdown('<div class="title">Space Prediction Model</div>', unsafe_allow_html=True)
 
     SUBCOUNTY = st.selectbox('SUBCOUNTY',  ['KIHARU', 'GATANGA', 'KANDARA', 'KANGEMA', 'KIGUMO', 'MURANG’A SOUTH', 'MATHIOYA'])
     YEAR_2011 = st.number_input('YEAR2011', min_value=0, max_value=82450)
@@ -77,9 +101,9 @@ def main():
         try:
             prediction = model.predict(input_data)[0]
             if prediction == 0:
-                st.write('Prediction: No Space Available')
+                st.markdown('<div class="prediction-result">Prediction: No Space Available</div>', unsafe_allow_html=True)
             else:
-                st.write('Prediction: Space Available')
+                st.markdown('<div class="prediction-result">Prediction: Space Available</div>', unsafe_allow_html=True)
         except Exception as e:
             st.write(f"An error occurred: {e}")
 
