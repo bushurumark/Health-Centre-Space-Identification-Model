@@ -92,7 +92,7 @@ def main():
     LEVEL = st.selectbox('LEVEL', ['Dispensary', 'Health Centre', 'Sub-district'])
     FUNCTIONALITY2 = st.selectbox('FUNCTIONALITY2', ['Fair', 'Below', 'Average', 'Good'])
     STATUS3 = st.selectbox('STATUS3', ['Fair', 'Good'])
-    Land_elevation = st.selectbox('Land_elevation', ['1<1200 meters asl', '<1200 meters asl'])
+    Land_elevation = st.selectbox('Land_elevation', ['1<1200 meters asl00+ meters asl', '<1200 meters asl'])
     Capacity_coded = st.selectbox('Capacity_coded', ['Minimum capacity', 'No capacity', 'Sufficient installed capacity'])
 
     if st.button('Predict'):
