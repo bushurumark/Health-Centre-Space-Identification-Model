@@ -60,10 +60,10 @@ def preprocess_input(SUBCOUNTY, YEAR_2011, YEAR_2012, YEAR_2013, AGENCY,
 st.markdown("""
     <style>
     .main {
-        background-color: #f5f5f5;
+        background-color: purple;
     }
     .title {
-        color: #4CAF50;
+        color: green;
         text-align: center;
         font-size: 40px;
     }
@@ -72,7 +72,7 @@ st.markdown("""
         font-weight: bold;
     }
     .prediction-result {
-        color: #008080;
+        color: red;
         font-size: 30px;
         text-align: center;
         font-weight: bold;
@@ -84,16 +84,16 @@ st.markdown("""
 def main():
     st.markdown('<div class="title">Space Prediction Model</div>', unsafe_allow_html=True)
 
-    SUBCOUNTY = st.selectbox('SUBCOUNTY',  ['KIHARU', 'GATANGA', 'KANDARA', 'KANGEMA', 'KIGUMO', 'MURANG’A SOUTH', 'MATHIOYA'])
-    YEAR_2011 = st.number_input('YEAR2011', min_value=0, max_value=82450)
-    YEAR_2012 = st.number_input('YEAR2012', min_value=0, max_value=82450)
-    YEAR_2013 = st.number_input('YEAR2013', min_value=0, max_value=82450)
+    SUBCOUNTY = st.selectbox('SUB-COUNTY',  ['KIHARU', 'GATANGA', 'KANDARA', 'KANGEMA', 'KIGUMO', 'MURANG’A SOUTH', 'MATHIOYA'])
+    YEAR_2011 = st.number_input('NUMBER OF PATIENTS IN THE YEAR 2011', min_value=0, max_value=82450)
+    YEAR_2012 = st.number_input('NUMBER OF PATIENTS IN THE YEAR 2012', min_value=0, max_value=82450)
+    YEAR_2013 = st.number_input('NUMBER OF PATIENTS IN THE YEAR 2013', min_value=0, max_value=82450)
     AGENCY = st.selectbox('AGENCY', ['County Government', 'CBO'])
     LEVEL = st.selectbox('LEVEL', ['Dispensary', 'Health Centre', 'Sub-district'])
     FUNCTIONALITY2 = st.selectbox('FUNCTIONALITY2', ['Fair', 'Below', 'Average', 'Good'])
-    STATUS3 = st.selectbox('STATUS3', ['Fair', 'Good'])
-    Land_elevation = st.selectbox('Land_elevation', ['1<1200 meters asl00+ meters asl', '<1200 meters asl'])
-    Capacity_coded = st.selectbox('Capacity_coded', ['Minimum capacity', 'No capacity', 'Sufficient installed capacity'])
+    STATUS3 = st.selectbox('STATUS', ['Fair', 'Good'])
+    Land_elevation = st.selectbox('LAND ELEVATION', ['1<1200 meters asl', '<1200 meters asl'])
+    Capacity_coded = st.selectbox('CAPACITY', ['Minimum capacity', 'No capacity', 'Sufficient installed capacity'])
 
     if st.button('Predict'):
         input_data = preprocess_input(SUBCOUNTY, YEAR_2011, YEAR_2012, YEAR_2013, AGENCY, LEVEL, FUNCTIONALITY2,
